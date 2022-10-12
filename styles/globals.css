@@ -42,3 +42,22 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 0; /*Removes default border-radius that FF applies*/
   @apply bg-almostwhite rounded-full h-7 w-7;
 }
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  @apply h-2;
+  @apply bg-neongreen;
+}
+input[type="range"]::-moz-range-track {  
+  @apply h-2;
+  @apply bg-verydarkgrey;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  @apply h-2;
+  @apply bg-neongreen;
+}
+input[type="range"]::-ms-fill-upper {  
+  @apply h-2;
+  @apply bg-verydarkgrey;
+}

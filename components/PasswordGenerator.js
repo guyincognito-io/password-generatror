@@ -131,7 +131,9 @@ export default function PasswordGenerator() {
     const max = slider.max
     const value = slider.value
 
-    slider.style.background = `linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${(value-min)/(max-min)*100}%, #18171F ${(value-min)/(max-min)*100}%, #18171F 100%)`
+    const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+    if(isChrome)
+      slider.style.background = `linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${(value-min)/(max-min)*100}%, #18171F ${(value-min)/(max-min)*100}%, #18171F 100%)`
     calulateStrength()
     
     
